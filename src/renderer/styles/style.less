@@ -1,0 +1,115 @@
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica Neue, PingFangSC-Regular, Arial, Microsoft YaHei;
+  font-size: 12px;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.theme-light {
+  // 下载管理器
+  --download-bg-color: #fff;
+  --download-font-color: #333;
+  --download-font-color2: #333;
+  --download-button-border-color: #d6d6d6;
+  --download-button-bg-color: @#fff;
+  --download-input-border-color: #d6d6d6;
+  --download-input-bg-color: #fff;
+  --download-failed-font-color: #e13e36;
+  --download-item-background-color: #fff;
+  --download-item-mask-background-color: #cce5f1;
+  --download-item-mask-border-color: rgba(0, 139, 206, 0.4);
+
+  // 模态框
+  --modal-bg: #fff;
+  --modal-color: #333;
+  --modal-split: #d9d9d9; // 分割线
+  --modal-shadow: rgba(51, 51, 51, 0.3);
+  --modal-mask: rgba(51, 51, 51, 0.5);
+}
+
+.custom-button {
+  min-width: 62px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+  text-align: center;
+  font-size: 1rem;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  color: #333;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.custom-button[type='primary'] {
+  background-color: #4686f2;
+  color: #fff;
+  border: 0;
+}
+
+.custom-button[type='default'] {
+  background: #fff;
+  color: #525252;
+  border: 1px solid #d9d9d9;
+
+  &:hover {
+    border: 1px solid #4686f2;
+    color: #4686f2;
+  }
+}
+
+.custom-button[disabled='disabled'][type='default'] {
+  cursor: not-allowed;
+  color: #c3cbd6;
+  background-color: #f7f7f7;
+  border-color: #d7dde4;
+}
+
+.custom-button[disabled='disabled'][type='primary'] {
+  cursor: not-allowed;
+  color: #ffffff;
+  background: #bbbbbb;
+  opacity: 0.6;
+  // border-color: #D7DDE4;
+}
+
+.custom-input {
+  width: 100%;
+  height: 28px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  font-size: 1rem;
+  color: #525252;
+  padding-left: 8px;
+  &:hover {
+    border: 1px solid #008bce;
+  }
+  &:focus {
+    border: 1px solid #a5e1ff;
+    outline: none;
+  }
+}
+.custom-input[disabled="disabled"]{
+  cursor: not-allowed;
+  &:hover {
+    border: 1px solid #d9d9d9;
+  }
+}
+.custom-input.error{
+  border: 1px solid #EB2525;
+}
